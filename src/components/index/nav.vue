@@ -82,7 +82,14 @@ export default {
     width: 64px;
   }
 }
+.horizontal-collapse-transition { 
+        transition: 0s width ease-in-out, 0s padding-left ease-in-out, 0s padding-right ease-in-out; 
+    } 
+#Nav::-webkit-scrollbar {
+    display: none;
+}
 #Nav{
+    overflow: auto;
     position: fixed;
     width: $navWidth;
     height: 100%;

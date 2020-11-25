@@ -21,12 +21,12 @@ export default {
 }
 #Content{
     width: calc(100% - 290px);
-    height: calc(100% - 115px);
+    height: calc(100% - 95px);
     box-sizing: border-box;
     margin-top: 95px;
     background-color: white;
     margin-left: 270px;
-    padding: 20px;
+    padding: 20px 20px 0px 20px;
     transition:all  ease 1s;
 }
 </style>

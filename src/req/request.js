@@ -10,8 +10,9 @@ const service = axios.create({
 
 //请求数据之前
 service.interceptors.request.use( config => {
-    console.log(config);
-    config.headers.token = "qqqqqqqqqq";
+    //console.log(config);
+    config.headers.Tokey = sessionStorage.token;
+    config.headers.UserName = sessionStorage.userName;
     return config;
 }, error => {
     console.log(error);

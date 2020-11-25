@@ -7,10 +7,13 @@ import 'element-ui/lib/theme-chalk/index.css';
 import store from "./store";
 import "./iocn";
 import "./router/app";
+import global from "./req/global";
 
 
 //Vue.use(VueCompositionApi);
 Vue.use(ElementUI);
+//全局组件
+Vue.use(global);
 Vue.config.productionTip = false;
 
 

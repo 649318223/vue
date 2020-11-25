@@ -1,7 +1,7 @@
 const head = {
     state: {
         count : 10,
-        isCollapse :  false   //JSON.parse(localStorage.navState) ||
+        isCollapse :  false  //|| JSON.parse(localStorage.navState) 
       },
       mutations: {
         set_count(state,value){
