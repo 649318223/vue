@@ -145,7 +145,7 @@ export default {
             this.addtitle1 = "二级分类编辑";
             this.addtitle2 = "二级分类名称";
             this.addtitle3 = "一级分类主键"
-            this.addType = "addtwo";
+            this.addType = "addtwo"; 
         },
     //  获取分类数据
         getname(){
@@ -185,6 +185,7 @@ export default {
             this.updateId = id;
             this.addType = "updateFrist";
         },
+        //创建
         //修改一级数据
         updatelist_tj(){
             if(this.fristName == ""){
