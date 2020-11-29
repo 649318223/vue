@@ -1,0 +1,42 @@
+.el-submenu .el-menu-item {
+  padding-left: 50px !important;
+}
+
+.el-submenu .el-menu-item.is-active {
+  background-color: rgba(255, 0, 0, 0.2) !important;
+  color: white !important;
+}
+
+li.el-submenu.is-active.is-opened .el-submenu__title {
+  background-color: red !important;
+}
+
+.el-submenu__title:hover {
+  background-color: red !important;
+}
+
+.el-menu {
+  border-right: 0 !important;
+}
+
+.el-menu-item {
+  background-color: #434A50 !important;
+}
+
+.el-menu-item:hover {
+  background-color: rgba(255, 0, 0, 0.2) !important;
+}
+
+.el-menu-item.is-active {
+  background-color: red !important;
+  color: white !important;
+}
+
+.el-menu--popup {
+  box-shadow: 0 !important;
+  padding: 0 !important;
+}
+
+.el-menu--popup-right-start {
+  margin-left: 0 !important;
+}
