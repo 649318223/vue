@@ -52,14 +52,15 @@
                 element-loading-background="rgba(225, 225, 225, 0.8)">
              <el-table :data="tableData" border  @selection-change="handleSelectionChange" style="width: 100%" >
                 <el-table-column type="selection" width="45" align="center"></el-table-column>
-                <el-table-column prop="title" label="标题" content align="center"></el-table-column>
+                <el-table-column prop="title" label="标题"  width="130"  content align="center"></el-table-column>
                 <el-table-column prop="categoryId" label="类别" width="150" :formatter='formatterList' align="center"></el-table-column>
                 <el-table-column prop="content"  label="内容" align="center"></el-table-column>
                 <el-table-column prop="createDate" width="150" label="日期" :formatter='toDate'  align="center" ></el-table-column>
-                <el-table-column fixed="right" label="操作" width="150" align="center">
+                <el-table-column fixed="right" label="操作"  align="center">
                     <template slot-scope="scope">
                         <el-button @click="deletelist(scope.row)" type="danger" size="mini">删除</el-button>
                         <el-button @click="editNews(scope.row)" type="success" size="mini">编辑</el-button>
+                        <el-button @click="editInfoNews(scope.row)" type="success" size="mini">编辑详情</el-button>
                     </template>
                 </el-table-column>
             </el-table>
@@ -181,6 +182,15 @@ export default {
             this.editID = row.id;
             this.opentype = 'edit'
             this.showDialog = true;
+        },
+        editInfoNews(row){
+            this.$router.push({
+                  name: 'InfoDetails',
+                  params: {
+                    row: row
+                  }
+            })
+
         },
         //时间格式化   
         toDate(row){
