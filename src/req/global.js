@@ -77,6 +77,23 @@ export default{
             var ss = (date.getSeconds() < 10 ? '0' + date.getSeconds() : date.getSeconds());
             return YY + MM + DD +" "+hh + mm + ss;
         }
+        //获取七牛云TOKEN
+        Vue.prototype.getqnyToken = async function () {
+            var data;
+            await server.request({
+                method: 'post',
+                url: '/uploadImgToken/',
+                async: false,
+                data: {
+                       'accesskey' : 'VkhIT9vyiSPZX3rV0dEkxSShdLpsbIN0Lw38TThU',
+                       'secretkey' : 'NiPodDIUjVGrPFIdtbAuiCjLRbUKLua2vBlrlDYD',
+                       'buckety' : 'mzuploadimg'
+                }
+                }).then(res => {
+                     data = res;
+                });
+                return data;
+        }
         Vue.prototype.globalNewsList = function(num){
             this.loading = true;
             server.request({

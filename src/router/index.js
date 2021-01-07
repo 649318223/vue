@@ -70,6 +70,14 @@ const routes = [
           name : "信息分类"
         },
         component: () =>import("../components/info/infoClass.vue")
+      },
+      {
+        path: "/infoDetails",
+        name: "InfoDetails",
+        meta : {
+          name : "详细信息"
+        },
+        component: () =>import("../components/info/infoDetails.vue")
       }
     ]
   },

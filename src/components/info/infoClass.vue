@@ -153,7 +153,9 @@ export default {
                 this.category = data
             })
         },
-        //删除分类
+        /**
+         * @name:删除分类
+         */     
         deletelist(id){
             this.$confirm('确认删除吗?', '提示', {
                 confirmButtonText: '确定',

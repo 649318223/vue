@@ -16,7 +16,7 @@
       router>
 
       <template v-for="(item,index) in listMeut">
-        <el-submenu :key="item.id" :index="index+''">
+        <el-submenu :key="item.id" :index="index+''" v-if="!item.hidden">
           <!-- 一级菜单 -->
           <template slot="title">
             <!-- <i class="el-icon-location"></i> -->
@@ -25,7 +25,10 @@
             <span>{{item.meta.name}}</span>
           </template>
           <!-- 二级菜单 -->
-            <el-menu-item v-for="(subItem,index) in item.children" :key="subItem.id" :index="subItem.path">{{subItem.meta.name}}</el-menu-item>
+          <template v-for="(subItem,index) in item.children" >
+            <el-menu-item :key="subItem.id" :index="subItem.path" v-if="!subItem.hidden">{{subItem.meta.name}}</el-menu-item>
+          </template>
+            
       
           <!-- <el-submenu index="1-4">
             <template slot="title">选项4</template>
