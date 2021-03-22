@@ -1,4 +1,15 @@
 const path = require('path');
+const env = process.env.NODE_ENV;
+let target = '';
+// 默认是本地环境
+console.log(process.env.NODE_ENV)
+if(env==='production'){  // 生产环境
+    target = "VUE_APP_ABC";
+}else if(env==='test'){ // 测试环境
+    target = "VUE_APP_ABC";
+}else{  // 本地环境
+    target = "VUE_APP_ABC";
+}
 module.exports = {
     // 部署应用时的基本 URL
     publicPath: process.env.NODE_ENV === 'production' ? './' : '/',
@@ -75,8 +86,10 @@ module.exports = {
                 }
             },
      },
+     
     // 所有 webpack-dev-server 的选项都支持
     devServer: {
+        
         // open: false,
         // port: 8080,
         // // 跨域

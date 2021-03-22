@@ -15,6 +15,7 @@ export default {
         twoName : ""
       }
     },
+    
 }
 </script>
 <style lang="scss">

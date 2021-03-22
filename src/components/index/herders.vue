@@ -1,13 +1,13 @@
 <template>
   <div id="herders">
     <div class="head-left" @click="change_nav()">
-      <svg-iocn  iconClass="menu"  className="menu"></svg-iocn>
+      <svg-iocn  iconClass="menu" className="menu"></svg-iocn>
     </div>
     <div class="head-right">
       <img src="../../assets/user.png" alt="">
       <div class="username">{{getUserName}}</div>
       <div class="loginOut" @click="loginOut()">
-          <svg-iocn  iconClass="LoginOut"  className="LoginOut"></svg-iocn>
+          <svg-iocn  iconClass="LoginOut" className="LoginOut"></svg-iocn>
       </div>
       
     </div>
