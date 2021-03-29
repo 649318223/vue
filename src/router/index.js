@@ -109,7 +109,8 @@ const originalPush = VueRouter.prototype.push
     return originalPush.call(this, location).catch(err => err)
 }
 const router = new VueRouter({
-  routes
+  routes,
+  mode:'history'
 });
 
 export default router;

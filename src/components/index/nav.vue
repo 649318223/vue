@@ -21,11 +21,11 @@
           <template slot="title">
             <!-- <i class="el-icon-location"></i> -->
             
-            <svg-iocn  :iconClass="item.meta.iocn"  :className="item.meta.iocn"></svg-iocn>
+            <svg-iocn  :iconClass="item.meta.iocn" :className="item.meta.iocn"></svg-iocn>
             <span>{{item.meta.name}}</span>
           </template>
           <!-- 二级菜单 -->
-          <template v-for="(subItem,index) in item.children" >
+          <template v-for="(subItem) in item.children" >
             <el-menu-item :key="subItem.id" :index="subItem.path" v-if="!subItem.hidden">{{subItem.meta.name}}</el-menu-item>
           </template>
             
@@ -59,6 +59,7 @@ export default {
         this.listMeut = this.$router.options.routes;
         console.log(this.listMeut);
         this.$store.commit('set_count',100)
+        console.log(process.env.NODE_ENV.VUE_APP_ABC);
       },
       handleOpen(key, keyPath) {
         //console.log(key, keyPath);
