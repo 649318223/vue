@@ -207,15 +207,6 @@ export default {
         },
         //获取分类
         getname(){
-    //         server.request({
-    //           method: 'post',
-    //           url: '/news/getCategoryAll/',
-    //           async: false,
-    //           data: {}
-    //         }).then(res => {
-    //             var data = res.data;
-    //             this.options = data
-    //         });
             this.getClassName().then(data => { 
                 this.options = data;
             })   //全局调用

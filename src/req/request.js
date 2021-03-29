@@ -1,3 +1,11 @@
+/*
+ * @Descripttion: 
+ * @version: 
+ * @Author: sch
+ * @Date: 2020-11-29 16:53:43
+ * @LastEditors: sch
+ * @LastEditTime: 2021-03-02 17:49:10
+ */
 import axios from 'axios';
 import {Message} from 'element-ui';
 
@@ -25,7 +33,7 @@ service.interceptors.response.use(response => {
     if(data.resCode === 0){
         return response.data;
     }else{
-        //Message.error(data.message)
+        Message.error(data.message)
         return Promise.reject(data);
     }
     
